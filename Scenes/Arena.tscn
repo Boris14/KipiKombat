@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfaq3dwhigtis"]
+
+[ext_resource type="Script" path="res://Scripts/Arena.gd" id="1_36dfb"]
+[ext_resource type="Texture2D" uid="uid://c5m3udttm6g0r" path="res://Assets/Background.jpg" id="1_q1p8l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72tuu"]
+size = Vector2(1922, 173)
+
+[node name="Arena" type="Node2D"]
+script = ExtResource("1_36dfb")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_q1p8l")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="Ground"]
+position = Vector2(963, 994.5)
+shape = SubResource("RectangleShape2D_72tuu")
+debug_color = Color(0.886275, 0.505882, 0, 0.419608)
+
+[node name="Player1Start" type="Node2D" parent="."]
+position = Vector2(450, 720)
+
+[node name="Player2Start" type="Node2D" parent="."]
+position = Vector2(1470, 720)

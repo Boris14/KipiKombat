@@ -1,15 +1,21 @@
 class_name Player
 extends CharacterBody2D
 
+signal health_changed(old_health, new_health)
+
 const SPEED = 300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@export var max_health := 100.0
+
 @onready var _is_player_1 = true if has_meta("is_player_1") else false
 @onready var _left_input = "player1left" if _is_player_1 else "player2left"
 @onready var _right_input = "player1right" if _is_player_1 else "player2right"
 @onready var _punch_input = "player1punch" if _is_player_1 else "player2punch"
+
+var _curr_health : float = max_health
 
 func _ready():
 	pass

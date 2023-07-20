@@ -2,6 +2,8 @@ extends Node2D
 
 @export var player_scene : PackedScene
 
+@onready var _hud = $HUD as HUD
+
 var _player_1
 var _player_2
 
@@ -11,6 +13,8 @@ func _ready():
 		_player_1 = player_scene.instantiate() as Player
 		_player_1.position = $Player1Start.position
 		_player_1.set_meta("is_player_1", true)
+		#_hud.player_1_healthbar.set_max_health(_player_1.max_health)
+		#_player_1.connect("health_changed", _hud.player_1_healthbar._on_player_health_changed)
 		add_child(_player_1)
 		
 # Ctrl + K for multiple line comment
@@ -18,7 +22,11 @@ func _ready():
 		_player_2 = player_scene.instantiate() as Player
 		_player_2.position = $Player2Start.position
 		_player_2.scale = Vector2(-1, 1)
+		#_hud.player_2_healthbar.set_max_health(_player_2.max_health)
+		#_player_2.connect("health_changed", _hud.player_2_healthbar._on_player_health_changed)
 		add_child(_player_2)
+		
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

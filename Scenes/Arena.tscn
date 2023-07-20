@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfaq3dwhigtis"]
+[gd_scene load_steps=5 format=3 uid="uid://cfaq3dwhigtis"]
 
 [ext_resource type="Script" path="res://Scripts/Arena.gd" id="1_36dfb"]
 [ext_resource type="Texture2D" uid="uid://c5m3udttm6g0r" path="res://Assets/Background.jpg" id="1_q1p8l"]
+[ext_resource type="PackedScene" uid="uid://whuaax5cnxiq" path="res://Scenes/UI/HUD.tscn" id="2_3s43i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72tuu"]
 size = Vector2(1922, 173)
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_36dfb")
+
+[node name="HUD" parent="." instance=ExtResource("2_3s43i")]
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)

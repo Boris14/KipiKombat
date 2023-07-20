@@ -15,8 +15,6 @@ scale = Vector2(1.6, 1.6)
 texture = ExtResource("1_q1p8l")
 
 [node name="Ground" type="StaticBody2D" parent="."]
-collision_layer = 7
-collision_mask = 7
 
 [node name="Collision" type="CollisionShape2D" parent="Ground"]
 position = Vector2(963, 994.5)
@@ -24,7 +22,7 @@ shape = SubResource("RectangleShape2D_72tuu")
 debug_color = Color(0.886275, 0.505882, 0, 0.419608)
 
 [node name="Player1Start" type="Node2D" parent="."]
-position = Vector2(450, 720)
+position = Vector2(450, 936)
 
 [node name="Player2Start" type="Node2D" parent="."]
-position = Vector2(1470, 720)
+position = Vector2(1470, 936)

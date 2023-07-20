@@ -17,6 +17,7 @@ func _ready():
 	if $Player2Start != null and player_scene != null:
 		_player_2 = player_scene.instantiate() as Player
 		_player_2.position = $Player2Start.position
+		_player_2.scale = Vector2(-1, 1)
 		add_child(_player_2)
 
 

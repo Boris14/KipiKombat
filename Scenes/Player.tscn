@@ -1,22 +1,98 @@
-[gd_scene load_steps=4 format=3 uid="uid://dood4awxb371"]
+[gd_scene load_steps=20 format=3 uid="uid://dood4awxb371"]
 
-[ext_resource type="Texture2D" uid="uid://dgjg1g6ru0x48" path="res://Assets/icon.svg" id="1_6gtrf"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7d6p6"]
+[ext_resource type="Texture2D" uid="uid://bavocre7dneo6" path="res://Assets/Animation/Kano/Idle 0.png" id="3_hsq6w"]
+[ext_resource type="Texture2D" uid="uid://cqoc0emgn7g81" path="res://Assets/Animation/Kano/Idle 1.png" id="4_javqj"]
+[ext_resource type="Texture2D" uid="uid://bng3nhfxgqo82" path="res://Assets/Animation/Kano/Idle 2.png" id="5_kwuqi"]
+[ext_resource type="Texture2D" uid="uid://dle6wnfahekgk" path="res://Assets/Animation/Kano/Idle 3.png" id="6_xst2d"]
+[ext_resource type="Texture2D" uid="uid://dqm4xn0leep4t" path="res://Assets/Animation/Kano/Idle 4.png" id="7_kpdh7"]
+[ext_resource type="Texture2D" uid="uid://7hli7bbjwnub" path="res://Assets/Animation/Kano/Idle 5.png" id="8_ki17h"]
+[ext_resource type="Texture2D" uid="uid://73a7p175xkfe" path="res://Assets/Animation/Kano/Idle 6.png" id="9_nvs0k"]
+[ext_resource type="Texture2D" uid="uid://20mf3axco7ff" path="res://Assets/Animation/Kano/Walk 0.png" id="10_pjhdx"]
+[ext_resource type="Texture2D" uid="uid://bx7g4t25ghd40" path="res://Assets/Animation/Kano/Walk 1.png" id="11_krrvd"]
+[ext_resource type="Texture2D" uid="uid://by1w1aynjhlue" path="res://Assets/Animation/Kano/Walk 2.png" id="12_0bt06"]
+[ext_resource type="Texture2D" uid="uid://g3a0wk1j3w5e" path="res://Assets/Animation/Kano/Walk 3.png" id="13_wuf34"]
+[ext_resource type="Texture2D" uid="uid://mdb0otitjgpt" path="res://Assets/Animation/Kano/Walk 4.png" id="14_4k7h7"]
+[ext_resource type="Texture2D" uid="uid://bwtif4qgsul43" path="res://Assets/Animation/Kano/Walk 5.png" id="15_bhf5a"]
+[ext_resource type="Texture2D" uid="uid://dbnrvpqxpm38p" path="res://Assets/Animation/Kano/Walk 6.png" id="16_2pipi"]
+[ext_resource type="Texture2D" uid="uid://dswl5dqyjb11w" path="res://Assets/Animation/Kano/Walk 7.png" id="17_w3lgd"]
+[ext_resource type="Texture2D" uid="uid://b2rl65vslsjti" path="res://Assets/Animation/Kano/Walk 8.png" id="18_i0j8h"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_de030"]
-radius = 48.0
-height = 380.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_poy44"]
+size = Vector2(190, 388)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sa853"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hsq6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_javqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kwuqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xst2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kpdh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ki17h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nvs0k")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_pjhdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_krrvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0bt06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wuf34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4k7h7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bhf5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2pipi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_w3lgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_i0j8h")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 11.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 6
 script = ExtResource("1_7d6p6")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(-0.500003, 1.00001)
-scale = Vector2(0.773437, 2.98438)
-texture = ExtResource("1_6gtrf")
-metadata/_edit_lock_ = true
-
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_de030")
-metadata/_edit_lock_ = true
+position = Vector2(10, -195)
+shape = SubResource("RectangleShape2D_poy44")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(22, -194)
+scale = Vector2(3.01, 3.01)
+sprite_frames = SubResource("SpriteFrames_sa853")
+animation = &"Idle"
+frame_progress = 0.898316

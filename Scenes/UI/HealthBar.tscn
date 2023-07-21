@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c8qgtjm58s5ql"]
+[gd_scene load_steps=2 format=3 uid="uid://c8qgtjm58s5ql"]
+
+[ext_resource type="Script" path="res://Scripts/UI/HealthBar.gd" id="1_hgor2"]
 
 [node name="HealthBar" type="ProgressBar"]
 modulate = Color(0.984314, 0, 0.223529, 1)
@@ -16,3 +18,4 @@ grow_vertical = 2
 size_flags_vertical = 1
 value = 50.0
 show_percentage = false
+script = ExtResource("1_hgor2")

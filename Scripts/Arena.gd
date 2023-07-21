@@ -13,8 +13,8 @@ func _ready():
 		_player_1 = player_scene.instantiate() as Player
 		_player_1.position = $Player1Start.position
 		_player_1.set_meta("is_player_1", true)
-		#_hud.player_1_healthbar.set_max_health(_player_1.max_health)
-		#_player_1.connect("health_changed", _hud.player_1_healthbar._on_player_health_changed)
+		_hud.get_healthbar_1().set_max_health(_player_1.max_health)
+		_player_1.connect("health_changed", _hud.get_healthbar_1()._on_player_health_changed)
 		add_child(_player_1)
 		
 # Ctrl + K for multiple line comment
@@ -22,8 +22,8 @@ func _ready():
 		_player_2 = player_scene.instantiate() as Player
 		_player_2.position = $Player2Start.position
 		_player_2.scale = Vector2(-1, 1)
-		#_hud.player_2_healthbar.set_max_health(_player_2.max_health)
-		#_player_2.connect("health_changed", _hud.player_2_healthbar._on_player_health_changed)
+		_hud.get_healthbar_2().set_max_health(_player_2.max_health)
+		_player_2.connect("health_changed", _hud.get_healthbar_2()._on_player_health_changed)
 		add_child(_player_2)
 		
 		

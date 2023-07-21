@@ -38,5 +38,11 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		$AnimatedSprite2D.play("Idle")
+		
+		
+	if Input.is_action_just_pressed(_punch_input):
+		_curr_health -= 10
+		health_changed.emit(_curr_health + 10, _curr_health)
+	
 
 	move_and_slide()

@@ -1,22 +1,45 @@
-[gd_scene load_steps=20 format=3 uid="uid://dood4awxb371"]
+[gd_scene load_steps=74 format=3 uid="uid://dood4awxb371"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7d6p6"]
-[ext_resource type="Texture2D" uid="uid://bavocre7dneo6" path="res://Assets/Animation/Kano/Idle 0.png" id="3_hsq6w"]
-[ext_resource type="Texture2D" uid="uid://cqoc0emgn7g81" path="res://Assets/Animation/Kano/Idle 1.png" id="4_javqj"]
-[ext_resource type="Texture2D" uid="uid://bng3nhfxgqo82" path="res://Assets/Animation/Kano/Idle 2.png" id="5_kwuqi"]
-[ext_resource type="Texture2D" uid="uid://dle6wnfahekgk" path="res://Assets/Animation/Kano/Idle 3.png" id="6_xst2d"]
-[ext_resource type="Texture2D" uid="uid://dqm4xn0leep4t" path="res://Assets/Animation/Kano/Idle 4.png" id="7_kpdh7"]
-[ext_resource type="Texture2D" uid="uid://7hli7bbjwnub" path="res://Assets/Animation/Kano/Idle 5.png" id="8_ki17h"]
-[ext_resource type="Texture2D" uid="uid://73a7p175xkfe" path="res://Assets/Animation/Kano/Idle 6.png" id="9_nvs0k"]
-[ext_resource type="Texture2D" uid="uid://20mf3axco7ff" path="res://Assets/Animation/Kano/Walk 0.png" id="10_pjhdx"]
-[ext_resource type="Texture2D" uid="uid://bx7g4t25ghd40" path="res://Assets/Animation/Kano/Walk 1.png" id="11_krrvd"]
-[ext_resource type="Texture2D" uid="uid://by1w1aynjhlue" path="res://Assets/Animation/Kano/Walk 2.png" id="12_0bt06"]
-[ext_resource type="Texture2D" uid="uid://g3a0wk1j3w5e" path="res://Assets/Animation/Kano/Walk 3.png" id="13_wuf34"]
-[ext_resource type="Texture2D" uid="uid://mdb0otitjgpt" path="res://Assets/Animation/Kano/Walk 4.png" id="14_4k7h7"]
-[ext_resource type="Texture2D" uid="uid://bwtif4qgsul43" path="res://Assets/Animation/Kano/Walk 5.png" id="15_bhf5a"]
-[ext_resource type="Texture2D" uid="uid://dbnrvpqxpm38p" path="res://Assets/Animation/Kano/Walk 6.png" id="16_2pipi"]
-[ext_resource type="Texture2D" uid="uid://dswl5dqyjb11w" path="res://Assets/Animation/Kano/Walk 7.png" id="17_w3lgd"]
-[ext_resource type="Texture2D" uid="uid://b2rl65vslsjti" path="res://Assets/Animation/Kano/Walk 8.png" id="18_i0j8h"]
+[ext_resource type="Texture2D" uid="uid://4o7r72rxqkfu" path="res://Assets/Animation/Cody/Forward Kick/Forward Kick 0.PNG" id="2_rhfci"]
+[ext_resource type="Texture2D" uid="uid://g5ceq2yrc68o" path="res://Assets/Animation/Cody/Forward Kick/Forward Kick 1.PNG" id="3_77ih1"]
+[ext_resource type="Texture2D" uid="uid://dx3fhp2sfro52" path="res://Assets/Animation/Cody/Forward Kick/Forward Kick 2.PNG" id="4_3uy4g"]
+[ext_resource type="Texture2D" uid="uid://dwgcqc6ttwahx" path="res://Assets/Animation/Cody/Forward Kick/Forward Kick 3.PNG" id="5_k50a7"]
+[ext_resource type="Texture2D" uid="uid://dnyc17m4d130b" path="res://Assets/Animation/Cody/Forward Kick/Forward Kick 4.PNG" id="6_e5u8b"]
+[ext_resource type="Texture2D" uid="uid://b0p2kksh38wf3" path="res://Assets/Animation/Cody/Forward Kick/Forward Kick 5.PNG" id="7_nnm7q"]
+[ext_resource type="Texture2D" uid="uid://c2dtqx742n7pd" path="res://Assets/Animation/Cody/Forward Kick/Forward Kick 6.PNG" id="8_fxk8f"]
+[ext_resource type="Texture2D" uid="uid://ksl27qu4fysv" path="res://Assets/Animation/Cody/Idle/Idle 0.PNG" id="9_7rw5h"]
+[ext_resource type="Texture2D" uid="uid://b3skrxvh4q3hq" path="res://Assets/Animation/Cody/Idle/Idle 1.PNG" id="10_du8me"]
+[ext_resource type="Texture2D" uid="uid://ufb27g4lghj6" path="res://Assets/Animation/Cody/Idle/Idle 2.PNG" id="11_andk6"]
+[ext_resource type="Texture2D" uid="uid://dttj71o0at1fw" path="res://Assets/Animation/Cody/Idle/Idle 3.PNG" id="12_fg5d5"]
+[ext_resource type="Texture2D" uid="uid://cj3oaeiukvfbb" path="res://Assets/Animation/Cody/Idle/Idle 4.PNG" id="13_f85xn"]
+[ext_resource type="Texture2D" uid="uid://cdbeebtc3tqhx" path="res://Assets/Animation/Cody/Idle/Idle 5.PNG" id="14_pj5m1"]
+[ext_resource type="Texture2D" uid="uid://ddk3l2y58e77k" path="res://Assets/Animation/Cody/Idle/Idle 6.PNG" id="15_4mqwg"]
+[ext_resource type="Texture2D" uid="uid://dqh704jk2madt" path="res://Assets/Animation/Cody/Idle/Idle 7.PNG" id="16_5vreu"]
+[ext_resource type="Texture2D" uid="uid://bi3707w78o2e1" path="res://Assets/Animation/Cody/Jab/Jab 0.PNG" id="17_4l25w"]
+[ext_resource type="Texture2D" uid="uid://dpslexm87mmss" path="res://Assets/Animation/Cody/Jab/Jab 1.PNG" id="18_tnbyg"]
+[ext_resource type="Texture2D" uid="uid://cbw5gc16wexv1" path="res://Assets/Animation/Cody/Jab/Jab 2.PNG" id="19_6hh0r"]
+[ext_resource type="Texture2D" uid="uid://bodrnpx21jlpm" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 0.PNG" id="20_l2bd0"]
+[ext_resource type="Texture2D" uid="uid://p7ywq55k48ti" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 1.PNG" id="21_ihaqt"]
+[ext_resource type="Texture2D" uid="uid://deltfktvvk46h" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 2.PNG" id="22_xgy7b"]
+[ext_resource type="Texture2D" uid="uid://bq25greo86qy5" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 3.PNG" id="23_614t0"]
+[ext_resource type="Texture2D" uid="uid://bvxmqcwcvq10w" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 4.PNG" id="24_wpivs"]
+[ext_resource type="Texture2D" uid="uid://ctpx6yxfyepm7" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 5.PNG" id="25_pgjiy"]
+[ext_resource type="Texture2D" uid="uid://3dvvyl318jlg" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 6.PNG" id="26_qeepq"]
+[ext_resource type="Texture2D" uid="uid://bc101c2ux800c" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 7.PNG" id="27_jcn6g"]
+[ext_resource type="Texture2D" uid="uid://764blyffshu4" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 8.PNG" id="28_2xwhx"]
+[ext_resource type="Texture2D" uid="uid://b77elelgfmn4x" path="res://Assets/Animation/Cody/Walk Backward/Walk Backward 9.PNG" id="29_hg3g2"]
+[ext_resource type="Texture2D" uid="uid://rcuiv6jdyfjs" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 0.PNG" id="30_no4jw"]
+[ext_resource type="Texture2D" uid="uid://cbfe05duphouc" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 1.PNG" id="31_466nx"]
+[ext_resource type="Texture2D" uid="uid://dexw0238igixc" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 2.PNG" id="32_rkse8"]
+[ext_resource type="Texture2D" uid="uid://bn3jl31meoesk" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 3.PNG" id="33_0en7c"]
+[ext_resource type="Texture2D" uid="uid://bmkblrt2ov4kj" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 4.PNG" id="34_7dl1k"]
+[ext_resource type="Texture2D" uid="uid://ndnt1qnb1wil" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 5.PNG" id="35_k4bp4"]
+[ext_resource type="Texture2D" uid="uid://d1mcb67yy8eb3" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 6.PNG" id="36_ry4td"]
+[ext_resource type="Texture2D" uid="uid://bmts5nlk1f2uv" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 7.PNG" id="37_rm4d8"]
+[ext_resource type="Texture2D" uid="uid://fgtgxqss1ua8" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 8.PNG" id="38_ulr0i"]
+[ext_resource type="Texture2D" uid="uid://bgc4j51dfvxa1" path="res://Assets/Animation/Cody/Walk Forward/Walk Forward 9.PNG" id="39_vtuv5"]
+[ext_resource type="Texture2D" uid="uid://b6ih3sw3m2ps6" path="res://Assets/Animation/Cody/Cody sprite atlas.png" id="40_mqprd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poy44"]
 size = Vector2(190, 388)
@@ -25,67 +48,361 @@ size = Vector2(190, 388)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_hsq6w")
+"texture": ExtResource("2_rhfci")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_javqj")
+"texture": ExtResource("3_77ih1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_kwuqi")
+"texture": ExtResource("4_3uy4g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_xst2d")
+"texture": ExtResource("5_k50a7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_kpdh7")
+"texture": ExtResource("6_e5u8b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_ki17h")
+"texture": ExtResource("7_nnm7q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_nvs0k")
+"texture": ExtResource("8_fxk8f")
 }],
 "loop": true,
-"name": &"Idle",
-"speed": 11.0
+"name": &"Forward Kick",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_pjhdx")
+"texture": ExtResource("9_7rw5h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_krrvd")
+"texture": ExtResource("10_du8me")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_0bt06")
+"texture": ExtResource("11_andk6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_wuf34")
+"texture": ExtResource("12_fg5d5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_4k7h7")
+"texture": ExtResource("13_f85xn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_bhf5a")
+"texture": ExtResource("14_pj5m1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_2pipi")
+"texture": ExtResource("15_4mqwg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_w3lgd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_i0j8h")
+"texture": ExtResource("16_5vreu")
 }],
 "loop": true,
-"name": &"Walk",
-"speed": 11.0
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_4l25w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tnbyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6hh0r")
+}],
+"loop": true,
+"name": &"Jab",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_l2bd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ihaqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xgy7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_614t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wpivs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_pgjiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qeepq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jcn6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_2xwhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_hg3g2")
+}],
+"loop": true,
+"name": &"Walk Backward",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_no4jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_466nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rkse8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_0en7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_7dl1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_k4bp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ry4td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_rm4d8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ulr0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_vtuv5")
+}],
+"loop": true,
+"name": &"Walk Forward",
+"speed": 10.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0u3pw"]
+size = Vector2(94.7176, 49.5017)
+
+[sub_resource type="Animation" id="Animation_xo42v"]
+resource_name = "Forward Kick"
+length = 4.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4, 3, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [40, 41, 42, 43, 44, 45, 46]
+}
+
+[sub_resource type="Animation" id="Animation_2w847"]
+resource_name = "Idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14, 15, 16, 17]
+}
+
+[sub_resource type="Animation" id="Animation_vu2hn"]
+resource_name = "Jab"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_3foxw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_jx2gt"]
+resource_name = "Walk Backward"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+}
+
+[sub_resource type="Animation" id="Animation_cjo0c"]
+resource_name = "Walk Forward"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhqfl"]
+_data = {
+"Forward Kick": SubResource("Animation_xo42v"),
+"Idle": SubResource("Animation_2w847"),
+"Jab": SubResource("Animation_vu2hn"),
+"RESET": SubResource("Animation_3foxw"),
+"Walk Backward": SubResource("Animation_jx2gt"),
+"Walk Forward": SubResource("Animation_cjo0c")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kh6up"]
+animation = &"Forward Kick"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gh301"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a4mud"]
+animation = &"Jab"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_voq7l"]
+animation = &"Walk Backward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y2nyq"]
+animation = &"Walk Forward"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ytuit"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jpkp6"]
+advance_mode = 2
+advance_condition = &"is_walk_forward"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m7a7x"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a37v2"]
+advance_mode = 2
+advance_condition = &"is_jab"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_iskq1"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"is_walk_forward"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wuvnr"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3165a"]
+advance_mode = 2
+advance_condition = &"is_jab"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k802p"]
+advance_mode = 2
+advance_condition = &"is_walk_backward"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_retrp"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a7ja2"]
+advance_mode = 2
+advance_condition = &"is_walk_backward"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7xwwm"]
+advance_mode = 2
+advance_condition = &"is_walk_forward"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k122l"]
+advance_mode = 2
+advance_condition = &"is_forward_kick"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_01xry"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"is_walk_backward"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_br2bt"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_28blp"]
+advance_mode = 2
+advance_condition = &"is_forward_kick"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7t2ht"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"is_forward_kick"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1n4ub"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"is_jab"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_q4h0d"]
+"states/Forward Kick/node" = SubResource("AnimationNodeAnimation_kh6up")
+"states/Forward Kick/position" = Vector2(652, 304)
+states/Idle/node = SubResource("AnimationNodeAnimation_gh301")
+states/Idle/position = Vector2(495, 157)
+states/Jab/node = SubResource("AnimationNodeAnimation_a4mud")
+states/Jab/position = Vector2(349, 304)
+states/Start/position = Vector2(204, 157)
+"states/Walk Backward/node" = SubResource("AnimationNodeAnimation_voq7l")
+"states/Walk Backward/position" = Vector2(652, -37)
+"states/Walk Forward/node" = SubResource("AnimationNodeAnimation_y2nyq")
+"states/Walk Forward/position" = Vector2(349, -37)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_ytuit"), "Idle", "Walk Forward", SubResource("AnimationNodeStateMachineTransition_jpkp6"), "Walk Forward", "Idle", SubResource("AnimationNodeStateMachineTransition_m7a7x"), "Walk Forward", "Jab", SubResource("AnimationNodeStateMachineTransition_a37v2"), "Jab", "Walk Forward", SubResource("AnimationNodeStateMachineTransition_iskq1"), "Jab", "Idle", SubResource("AnimationNodeStateMachineTransition_wuvnr"), "Idle", "Jab", SubResource("AnimationNodeStateMachineTransition_3165a"), "Idle", "Walk Backward", SubResource("AnimationNodeStateMachineTransition_k802p"), "Walk Backward", "Idle", SubResource("AnimationNodeStateMachineTransition_retrp"), "Walk Forward", "Walk Backward", SubResource("AnimationNodeStateMachineTransition_a7ja2"), "Walk Backward", "Walk Forward", SubResource("AnimationNodeStateMachineTransition_7xwwm"), "Walk Backward", "Forward Kick", SubResource("AnimationNodeStateMachineTransition_k122l"), "Forward Kick", "Walk Backward", SubResource("AnimationNodeStateMachineTransition_01xry"), "Forward Kick", "Idle", SubResource("AnimationNodeStateMachineTransition_br2bt"), "Idle", "Forward Kick", SubResource("AnimationNodeStateMachineTransition_28blp"), "Jab", "Forward Kick", SubResource("AnimationNodeStateMachineTransition_7t2ht"), "Forward Kick", "Jab", SubResource("AnimationNodeStateMachineTransition_1n4ub")]
+graph_offset = Vector2(0, -77)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7d6p6")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
 position = Vector2(10, -195)
 shape = SubResource("RectangleShape2D_poy44")
 
@@ -94,5 +411,32 @@ texture_filter = 1
 position = Vector2(22, -194)
 scale = Vector2(3.01, 3.01)
 sprite_frames = SubResource("SpriteFrames_sa853")
-animation = &"Idle"
-frame_progress = 0.898316
+animation = &"Forward Kick"
+
+[node name="KickCollision" type="CollisionShape2D" parent="."]
+position = Vector2(134.45, -221.5)
+scale = Vector2(3.01, 3.01)
+shape = SubResource("RectangleShape2D_0u3pw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-2, 85)
+texture = ExtResource("40_mqprd")
+hframes = 10
+vframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+root_node = NodePath("../../AnimatedSprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_mhqfl")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_q4h0d")
+anim_player = NodePath("../Sprite2D/AnimationPlayer")
+active = true
+parameters/conditions/is_forward_kick = false
+parameters/conditions/is_idle = false
+parameters/conditions/is_jab = false
+parameters/conditions/is_walk_backward = false
+parameters/conditions/is_walk_forward = false

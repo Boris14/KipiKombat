@@ -10,7 +10,7 @@ var _player_2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if $Player1Start != null and player_scene != null:
-		_player_1 = player_scene.instantiate() as Player
+		_player_1 = player_scene.instantiate() as CodeAnimationPlayer
 		_player_1.position = $Player1Start.position
 		_player_1.set_meta("is_player_1", true)
 		_hud.get_healthbar_1().set_max_health(_player_1.max_health)
@@ -19,7 +19,7 @@ func _ready():
 		
 # Ctrl + K for multiple line comment
 	if $Player2Start != null and player_scene != null:
-		_player_2 = player_scene.instantiate() as Player
+		_player_2 = player_scene.instantiate() as CodeAnimationPlayer
 		_player_2.position = $Player2Start.position
 		_player_2.scale = Vector2(-1, 1)
 		_hud.get_healthbar_2().set_max_health(_player_2.max_health)

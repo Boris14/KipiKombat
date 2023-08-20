@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://svi0jiruqc6s"
-path="res://.godot/imported/Cody_sprite_atlas_2.png-ae970e2537920679fc6bbca7868990ab.ctex"
+uid="uid://rlspyo4fkw28"
+path="res://.godot/imported/PlayerSprite.png-44028d11d58ad1af327970c9d3e22896.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cody_sprite_atlas_2.png"
-dest_files=["res://.godot/imported/Cody_sprite_atlas_2.png-ae970e2537920679fc6bbca7868990ab.ctex"]
+source_file="res://Assets/PlayerSprite.png"
+dest_files=["res://.godot/imported/PlayerSprite.png-44028d11d58ad1af327970c9d3e22896.ctex"]
 
 [params]
 

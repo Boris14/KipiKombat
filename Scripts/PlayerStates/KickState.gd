@@ -1,0 +1,14 @@
+class_name KickState
+extends State
+
+var duration
+
+func _ready():
+	duration = anim_player.get_animation(animations[EAnimation.KICK]).length
+	character.velocity = Vector2(0, 0)
+	anim_player.play(animations[EAnimation.KICK])
+
+func _physics_process(delta):
+	duration -= delta
+	if(duration <= 0):
+		change_state.call(EState.IDLE)

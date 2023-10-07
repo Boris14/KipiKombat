@@ -5,5 +5,6 @@ enum {
 	IDLE,
 	WALK,
 	PUNCH,
-	KICK
+	KICK,
+	KNOCKBACK
 }

@@ -6,8 +6,8 @@ var friction = 0.32
 var walk_left_anim : String
 var walk_right_anim : String
 
-func setup(change_state, anim_player, character):
-	super.setup(change_state, anim_player, character)
+func setup(change_state, character, anim_player, area):
+	super.setup(change_state, character, anim_player, area)
 	if character.has_meta("is_player_1"):
 		walk_left_anim = animations.get(EAnimation.WALK_BACKWARDS)
 		walk_right_anim = animations.get(EAnimation.WALK_FORWARD)
@@ -24,11 +24,11 @@ func _physics_process(_delta):
 
 func move_left():
 	anim_player.play(walk_left_anim)
-	character.velocity -= Vector2(character.SPEED, 0)
+	character.velocity.x -= character.speed
 
 func move_right():
 	anim_player.play(walk_right_anim)
-	character.velocity += Vector2(character.SPEED, 0)
+	character.velocity.x += character.speed
 	
 func punch():
 	change_state.call(EState.PUNCH)

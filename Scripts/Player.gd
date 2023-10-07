@@ -3,9 +3,10 @@ extends CharacterBody2D
 
 signal health_changed(old_health, new_health)
 
-const SPEED = 250.0
-
 @export var max_health := 100.0
+@export var punch_damage := 10.0
+@export var kick_damage := 20.0
+@export var speed = 250.0
 
 @onready var _is_player_1 = true if has_meta("is_player_1") else false
 @onready var _left_input = "player1left" if _is_player_1 else "player2left"
@@ -15,19 +16,28 @@ const SPEED = 250.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var states
+var class_per_state
+var area_per_state
 var state : State
 var _curr_health : float = max_health
 
 func _init():
-	states = {
+	class_per_state = {
 		EState.IDLE : IdleState,
 		EState.WALK : WalkState,
 		EState.PUNCH : PunchState,
 		EState.KICK : KickState,
+		EState.KNOCKBACK : KnockbackState,
 	}
 
 func _ready():
+	area_per_state = {
+		EState.IDLE : null,
+		EState.WALK : null,
+		EState.PUNCH : $PunchArea,
+		EState.KICK : $KickArea,
+		EState.KNOCKBACK : null,
+	}
 	change_state(EState.IDLE)
 
 func _unhandled_input(event):
@@ -50,12 +60,22 @@ func _physics_process(delta):
 	move_and_slide()
 
 func change_state(new_state):
-	if not states.has(new_state):
+	if not class_per_state.has(new_state):
 		printerr("Invalid state given")
 		return
 	if state != null:
 		state.queue_free()
-	state = states.get(new_state).new()
-	state.setup(change_state, $AnimationPlayer, self)
+	state = class_per_state.get(new_state).new()
+	state.setup(change_state, self, $AnimationPlayer, area_per_state[new_state])
 	add_child(state)
 
+func take_damage(damage):
+	var old_health = _curr_health
+	_curr_health -= damage
+	if not state.is_class("KnockbackState"):
+		change_state(EState.KNOCKBACK)
+		
+	# Important to call health_changed at the end 
+	# because the state in connected to it
+	health_changed.emit(old_health, _curr_health)
+	

@@ -35,4 +35,7 @@ func punch():
 	
 func kick():
 	change_state.call(EState.KICK)
+	
+func block():
+	change_state.call(EState.BLOCK)
 

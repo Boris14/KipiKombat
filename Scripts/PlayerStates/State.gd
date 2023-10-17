@@ -13,6 +13,7 @@ var animations = {
 	EAnimation.PUNCH : "Punch",
 	EAnimation.KICK : "Kick",
 	EAnimation.KNOCKBACK : "Knockback",
+	EAnimation.BLOCK : "Block",
 }
 
 func setup(change_state, character, anim_player, area):
@@ -48,6 +49,9 @@ func punch():
 	pass
 	
 func kick():
+	pass
+	
+func block():
 	pass
 
 # Signal handlers	

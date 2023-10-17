@@ -6,5 +6,6 @@ enum {
 	WALK,
 	PUNCH,
 	KICK,
-	KNOCKBACK
+	KNOCKBACK,
+	BLOCK,
 }

@@ -6,12 +6,12 @@ var area_activation_time : float
 var area_active_duration : float
 
 func _ready():
-	var animation_id = animations[EAnimation.PUNCH]
-	duration = anim_player.get_animation(animation_id).length
+	var anim_name = animations[EAnimation.PUNCH]
+	duration = anim_player.get_animation(anim_name).length
 	area_activation_time = duration / 2
 	area_active_duration = duration / 3
 	character.velocity = Vector2(0, 0)
-	anim_player.play(animation_id)
+	anim_player.play(anim_name)
 
 func _physics_process(delta):
 	duration -= delta

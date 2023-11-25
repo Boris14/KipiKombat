@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfaq3dwhigtis"]
+[gd_scene load_steps=6 format=3 uid="uid://cfaq3dwhigtis"]
 
 [ext_resource type="Script" path="res://Scripts/Arena.gd" id="1_36dfb"]
 [ext_resource type="Texture2D" uid="uid://c5m3udttm6g0r" path="res://Assets/Background.jpg" id="1_q1p8l"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72tuu"]
 size = Vector2(1922, 173)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hqwo"]
+size = Vector2(120, 909)
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_36dfb")
@@ -21,6 +24,22 @@ texture = ExtResource("1_q1p8l")
 position = Vector2(963, 994.5)
 shape = SubResource("RectangleShape2D_72tuu")
 debug_color = Color(0.886275, 0.505882, 0, 0.419608)
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(1980, 450)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+shape = SubResource("RectangleShape2D_7hqwo")
+debug_color = Color(0.886275, 0.505882, 0, 0.419608)
+metadata/_edit_lock_ = true
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(-60, 450)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+shape = SubResource("RectangleShape2D_7hqwo")
+debug_color = Color(0.886275, 0.505882, 0, 0.419608)
+metadata/_edit_lock_ = true
 
 [node name="Player1Start" type="Node2D" parent="."]
 position = Vector2(450, 936)

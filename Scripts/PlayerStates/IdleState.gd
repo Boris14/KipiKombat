@@ -13,8 +13,11 @@ func move_right():
 func punch():
 	change_state.call(EState.PUNCH)
 
-func kick():
-	change_state.call(EState.KICK)
-
+func mid_kick():
+	change_state.call(EState.MID_KICK)
+	
+func low_kick():
+	change_state.call(EState.LOW_KICK)
+	
 func block():
 	change_state.call(EState.BLOCK)

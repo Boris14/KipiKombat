@@ -5,7 +5,8 @@ enum {
 	IDLE,
 	WALK,
 	PUNCH,
-	KICK,
+	MID_KICK,
+	LOW_KICK,
 	KNOCKBACK,
 	BLOCK,
 }

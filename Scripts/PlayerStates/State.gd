@@ -11,7 +11,8 @@ var animations = {
 	EAnimation.WALK_FORWARD : "Walk Forward",
 	EAnimation.WALK_BACKWARDS: "Walk Backwards",
 	EAnimation.PUNCH : "Punch",
-	EAnimation.KICK : "Kick",
+	EAnimation.MID_KICK : "Mid Kick",
+	EAnimation.LOW_KICK : "Low Kick",
 	EAnimation.KNOCKBACK : "Knockback",
 	EAnimation.BLOCK : "Block",
 }
@@ -48,7 +49,10 @@ func move_right():
 func punch():
 	pass
 	
-func kick():
+func low_kick():
+	pass
+	
+func mid_kick():
 	pass
 	
 func block():

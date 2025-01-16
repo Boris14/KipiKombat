@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var player_scene : PackedScene
+@export var playerBorko_scene : PackedScene
 
 @onready var _hud = $HUD as HUD
 
@@ -9,8 +10,8 @@ var _player_2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if $Player1Start != null and player_scene != null:
-		_player_1 = player_scene.instantiate() as Player
+	if $Player1Start != null and playerBorko_scene != null:
+		_player_1 = playerBorko_scene.instantiate() as Player
 		_player_1.position = $Player1Start.position
 		_player_1.set_meta("is_player_1", true)
 		_hud.get_healthbar_1().set_max_health(_player_1.max_health)

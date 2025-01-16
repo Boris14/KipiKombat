@@ -12,7 +12,8 @@ signal health_changed(old_health, new_health)
 @onready var _left_input = "player_1_left" if _is_player_1 else "player_2_left"
 @onready var _right_input = "player_1_right" if _is_player_1 else "player_2_right"
 @onready var _punch_input = "player_1_punch" if _is_player_1 else "player_2_punch"
-@onready var _kick_input = "player_1_kick" if _is_player_1 else "player_2_kick"
+@onready var _low_kick_input = "player_1_low_kick" if _is_player_1 else "player_2_low_kick"
+@onready var _mid_kick_input = "player_1_mid_kick" if _is_player_1 else "player_2_mid_kick"
 @onready var _block_input = "player_1_block" if _is_player_1 else "player_2_block"
 @onready var _curr_health : float = max_health
 
@@ -34,7 +35,8 @@ func _init():
 		EState.IDLE : IdleState,
 		EState.WALK : WalkState,
 		EState.PUNCH : PunchState,
-		EState.KICK : KickState,
+		EState.MID_KICK : MidKickState,
+		EState.LOW_KICK : LowKickState,
 		EState.KNOCKBACK : KnockbackState,
 		EState.BLOCK : BlockState,
 	}
@@ -45,7 +47,8 @@ func _ready():
 		EState.IDLE : null,
 		EState.WALK : null,
 		EState.PUNCH : $PunchArea,
-		EState.KICK : $KickArea,
+		EState.MID_KICK : $KickArea,
+		EState.LOW_KICK : $KickArea,
 		EState.KNOCKBACK : null,
 		EState.BLOCK : null,
 	}
@@ -69,8 +72,10 @@ func _unhandled_input(event):
 		if event.pressed and not event.echo:
 			if InputMap.action_has_event(_punch_input, event):
 				state.punch()
-			elif InputMap.action_has_event(_kick_input, event):
-				state.kick()
+			elif InputMap.action_has_event(_mid_kick_input, event):
+				state.mid_kick()
+			elif InputMap.action_has_event(_low_kick_input, event):
+				state.low_kick()
 			elif InputMap.action_has_event(_block_input, event):
 				state.block()
 
@@ -117,8 +122,10 @@ func _register_input():
 	
 	if Input.is_action_just_pressed(_punch_input):
 		input_key += "p"
-	if Input.is_action_just_pressed(_kick_input):
-		input_key += "k"
+	if Input.is_action_just_pressed(_mid_kick_input):
+		input_key += "mk"
+	if Input.is_action_just_pressed(_low_kick_input):
+		input_key += "lk"
 	
 	if input_key != input_last_key_pressed:
 		if input_buffer.size() >= input_buffer_max_size:

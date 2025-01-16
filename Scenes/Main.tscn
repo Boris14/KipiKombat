@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cv3a40mvh0d07"]
+[gd_scene load_steps=4 format=3 uid="uid://cv3a40mvh0d07"]
 
 [ext_resource type="PackedScene" uid="uid://cfaq3dwhigtis" path="res://Scenes/Arena.tscn" id="1_1ytsd"]
 [ext_resource type="PackedScene" uid="uid://dood4awxb371" path="res://Scenes/Player.tscn" id="2_eohx4"]
+[ext_resource type="PackedScene" uid="uid://do26hp3fc2fom" path="res://Scenes/PlayerBorko.tscn" id="3_4oako"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Arena" parent="." instance=ExtResource("1_1ytsd")]
 player_scene = ExtResource("2_eohx4")
+playerBorko_scene = ExtResource("3_4oako")

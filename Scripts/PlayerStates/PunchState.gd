@@ -6,7 +6,7 @@ var area_activation_time : float
 var area_active_duration : float
 
 func _ready():
-	var anim_name = animations[EAnimation.PUNCH]
+	var anim_name : String = animations[EAnimation.PUNCH]
 	duration = anim_player.get_animation(anim_name).length
 	area_activation_time = duration / 2
 	area_active_duration = duration / 3

@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://do26hp3fc2fom"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_i6e0i"]
-[ext_resource type="Texture2D" uid="uid://u5xcvtilxpqn" path="res://Assets/BorkoSprite.png" id="2_qowtf"]
+[ext_resource type="Texture2D" uid="uid://dkpahtqd2ypjm" path="res://Assets/BorkoSprite.png" id="2_vyb8k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poy44"]
 size = Vector2(190, 388)
@@ -204,11 +204,11 @@ shape = SubResource("RectangleShape2D_poy44")
 texture_filter = 1
 position = Vector2(-1.02059, -8.99769)
 scale = Vector2(0.498573, 0.498573)
-texture = ExtResource("2_qowtf")
+texture = ExtResource("2_vyb8k")
 flip_h = true
-hframes = 9
-vframes = 9
-frame = 9
+hframes = 15
+vframes = 10
+frame = 15
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

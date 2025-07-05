@@ -103,39 +103,13 @@ for gif_file in "${gif_files[@]}"; do
   # Define the output path for the trimmed file
   output_file="${OUTPUT_SUBDIR}/${gif_file}"
 
-  # Optional: Skip if the output file already exists and is newer than the source.
-  # This is a more sophisticated skip than just existence.
-  # If you want to always re-process, comment out this 'if' block.
-  # if [ -f "$output_file" ] && [ "$output_file" -nt "$gif_file" ]; then
-  #   echo "Skipping: $gif_file (newer version already exists in $OUTPUT_SUBDIR)"
-  #   ((skipped_count++))
-  #   continue
-  # fi
-  #
-  # Simpler skip: just check if it exists. If you want to overwrite, remove this.
-  # If you want to always process and potentially overwrite files in 'trimmed' folder,
-  # you can remove this 'if' block. For safety, it's good to at least warn.
-  # The current behavior is: if image.gif is processed, trimmed/image.gif is created.
-  # If script runs again, it will re-process image.gif and overwrite trimmed/image.gif.
-  # The skip below is for a *different* scenario: if you manually put a file
-  # named `image.gif` into `trimmed/` which is NOT from `image.gif` in current dir.
-  #
-  # For the requested behavior ("copy all trimmed GIFs there with their names intact"),
-  # we will generally *overwrite* if the script is run multiple times on the same source files.
-  # The check below is more about not processing files that are *already in* the output dir
-  # if they happen to share a name with a source file (less likely scenario).
-  #
-  # The primary intent is to process source GIFs and put their trimmed versions into 'trimmed'.
-  # If 'trimmed/some.gif' exists from a previous run of this script on './some.gif',
-  # running it again will re-trim './some.gif' and replace 'trimmed/some.gif'.
-
   echo "Processing: $gif_file  ->  $output_file"
 
   # The core ImageMagick command
   # -crop WxH+X+Y : Defines the crop area
   # +repage       : Crucial for animations. Resets the virtual canvas
   #                 to the new dimensions after cropping.
-  magick "$gif_file" -crop "$CROP_GEOMETRY" +repage "$output_file"
+  magick "$gif_file" -coalesce -crop "$CROP_GEOMETRY" +repage "$output_file"
 
   if [ $? -eq 0 ]; then
     echo "Successfully trimmed: $gif_file and saved to $output_file"

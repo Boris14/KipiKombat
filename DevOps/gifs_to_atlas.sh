@@ -49,7 +49,9 @@ for gif in "${gifs_to_process[@]}"; do # Modified to use the determined list of 
     mkdir -p "$temp_dir/$gif_name"
     
     # Split GIF into frames
-    magick convert "$gif" -coalesce PNG32:"$temp_dir/$gif_name/frame_%d.png" # Your original command
+    # Using %04d pads with zeros up to 4 digits (e.g., 0001, 0010, 0100)
+	# This safely handles up to 10,000 frames.
+	magick convert "$gif" -coalesce PNG32:"$temp_dir/$gif_name/frame_%04d.png"
     
     # Create a row for this GIF's frames using absolute paths
     frames_pattern="$temp_dir/$gif_name/frame_*.png"

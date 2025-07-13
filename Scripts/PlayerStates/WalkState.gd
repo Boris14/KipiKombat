@@ -30,14 +30,17 @@ func move_right():
 	anim_player.play(walk_right_anim)
 	character.velocity.x += character.speed
 	
+func squat():
+	change_state.call(EState.SQUAT)
+	
 func punch():
 	change_state.call(EState.PUNCH)
-	
-func mid_kick():
-	change_state.call(EState.MID_KICK)
-	
+
 func low_kick():
 	change_state.call(EState.LOW_KICK)
 	
 func block():
 	change_state.call(EState.BLOCK)
+	
+func squat_block():
+	change_state.call(EState.SQUAT_BLOCK)

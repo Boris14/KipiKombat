@@ -1,4 +1,4 @@
-class_name KnockbackState
+class_name HighKnockbackState
 extends State
 
 var duration : float
@@ -7,7 +7,7 @@ var knockback_force_multiplier := 50.0
 var friction := 0.85
 
 func _ready():
-	var anim_name = animations[EAnimation.KNOCKBACK]
+	var anim_name = animations[EAnimation.HIGH_KNOCKBACK]
 	duration = anim_player.get_animation(anim_name).length
 	anim_player.play(anim_name)
 	direction = -1 if character.has_meta("is_player_1") else 1

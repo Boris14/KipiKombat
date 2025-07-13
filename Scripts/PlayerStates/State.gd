@@ -11,10 +11,11 @@ var animations = {
 	EAnimation.WALK_FORWARD : "Walk Forward",
 	EAnimation.WALK_BACKWARDS: "Walk Backwards",
 	EAnimation.PUNCH : "Punch",
-	EAnimation.MID_KICK : "Mid Kick",
 	EAnimation.LOW_KICK : "Low Kick",
-	EAnimation.KNOCKBACK : "Knockback",
+	EAnimation.HIGH_KNOCKBACK : "High Knockback",
 	EAnimation.BLOCK : "Block",
+	EAnimation.SQUAT : "Squat",
+	EAnimation.SQUAT_BLOCK : "Squat Block",
 }
 
 func setup(change_state, character, anim_player, area):
@@ -46,16 +47,19 @@ func move_left():
 func move_right():
 	pass
 	
+func squat():
+	pass
+	
 func punch():
 	pass
 	
 func low_kick():
 	pass
 	
-func mid_kick():
+func block():
 	pass
 	
-func block():
+func squat_block():
 	pass
 
 # Signal handlers	

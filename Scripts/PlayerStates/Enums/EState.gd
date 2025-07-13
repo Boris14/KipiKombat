@@ -2,11 +2,12 @@ class_name EState
 extends Object
 
 enum {
-	IDLE,
-	WALK,
-	PUNCH,
-	MID_KICK,
-	LOW_KICK,
-	KNOCKBACK,
 	BLOCK,
+	HIGH_KNOCKBACK,
+	IDLE,
+	LOW_KICK,
+	PUNCH,
+	SQUAT_BLOCK,
+	WALK,
+	SQUAT,
 }

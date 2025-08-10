@@ -10,3 +10,6 @@ func _physics_process(delta):
 		return
 	if not Input.is_action_pressed(character._squat_input):
 		change_state.call(EState.IDLE)
+
+func block():
+	change_state.call(EState.SQUAT_BLOCK)

@@ -10,6 +10,9 @@ func move_left():
 func move_right():
 	change_state.call(EState.WALK)
 	
+func idle_to_squat():
+	change_state.call(EState.IDLE_TO_SQUAT)
+	
 func squat():
 	change_state.call(EState.SQUAT)
 	

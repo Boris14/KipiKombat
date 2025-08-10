@@ -9,5 +9,6 @@ enum {
 	PUNCH,
 	SQUAT_BLOCK,
 	WALK,
+	IDLE_TO_SQUAT,
 	SQUAT,
 }

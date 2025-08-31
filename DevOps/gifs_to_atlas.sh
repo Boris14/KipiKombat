@@ -51,14 +51,14 @@ for gif in "${gifs_to_process[@]}"; do # Modified to use the determined list of 
     # Split GIF into frames
     # Using %04d pads with zeros up to 4 digits (e.g., 0001, 0010, 0100)
 	# This safely handles up to 10,000 frames.
-	magick convert "$gif" -coalesce PNG32:"$temp_dir/$gif_name/frame_%04d.png"
+	magick "$gif" -coalesce PNG32:"$temp_dir/$gif_name/frame_%04d.png"
     
     # Create a row for this GIF's frames using absolute paths
     frames_pattern="$temp_dir/$gif_name/frame_*.png"
     # Check if any frames were created before attempting to append
     # Use a subshell to count files matching the pattern to avoid issues with nullglob state here
     if compgen -G "$frames_pattern" > /dev/null; then
-        magick convert "$temp_dir/$gif_name"/frame_*.png +append PNG32:"$temp_dir/${gif_name}_row.png" # Your original command
+        magick "$temp_dir/$gif_name"/frame_*.png +append PNG32:"$temp_dir/${gif_name}_row.png"
     else
         echo "Warning: No frames found for $gif_name after extraction. Skipping row creation."
     fi
@@ -88,6 +88,6 @@ if [ ${#rows[@]} -eq 0 ]; then
 fi
 
 # Stack all rows vertically
-magick convert "${rows[@]}" -append PNG32:"$output_file" # Your original command
+magick "${rows[@]}" -append PNG32:"$output_file"
 
 echo "Atlas created successfully: $output_file"

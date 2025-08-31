@@ -10,10 +10,15 @@ if ! command -v convert &> /dev/null && ! command -v magick &> /dev/null; then
     exit 1
 fi
 
-# Determine if to use 'magick convert' or just 'convert'
-IM_CONVERT_CMD="convert"
-if command -v magick &> /dev/null; then
-    IM_CONVERT_CMD="magick convert"
+# Use the 'magick' command, which is standard for ImageMagick 7+
+# and avoids conflicts with the Windows 'convert.exe' utility.
+IM_CONVERT_CMD="magick"
+
+# Verify that the command actually exists before we proceed.
+if ! command -v magick &> /dev/null; then
+  echo "Error: The 'magick' command was not found."
+  echo "Please install ImageMagick 7 or higher and ensure it is in your system's PATH."
+  exit 1
 fi
 
 echo "Using ImageMagick command: $IM_CONVERT_CMD"

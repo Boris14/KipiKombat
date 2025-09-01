@@ -36,6 +36,7 @@ func _init():
 		EState.IDLE : IdleState,
 		EState.WALK : WalkState,
 		EState.SQUAT : SquatState,
+		EState.IDLE_TO_SQUAT : IdleToSquatState,
 		EState.PUNCH : PunchState,
 		EState.LOW_KICK : LowKickState,
 		EState.HIGH_KNOCKBACK : HighKnockbackState,
@@ -53,6 +54,7 @@ func _ready():
 		EState.HIGH_KNOCKBACK : null,
 		EState.BLOCK : null,
 		EState.SQUAT_BLOCK : null,
+		EState.IDLE_TO_SQUAT : null,
 	}
 	change_state(EState.IDLE)
 
@@ -81,7 +83,7 @@ func _unhandled_input(event):
 			elif InputMap.action_has_event(_squat_block_input, event):
 				state.squat_block()
 			elif InputMap.action_has_event(_squat_input, event):
-				state.squat()
+				state.idle_to_squat()
 
 func change_state(new_state):
 	if not class_per_state.has(new_state):

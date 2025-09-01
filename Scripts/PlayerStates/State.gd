@@ -14,6 +14,7 @@ var animations = {
 	EAnimation.LOW_KICK : "Low Kick",
 	EAnimation.HIGH_KNOCKBACK : "High Knockback",
 	EAnimation.BLOCK : "Block",
+	EAnimation.IDLE_TO_SQUAT : "Idle to Squat",
 	EAnimation.SQUAT : "Squat",
 	EAnimation.SQUAT_BLOCK : "Squat Block",
 }
@@ -45,6 +46,9 @@ func move_left():
 	pass
 
 func move_right():
+	pass
+	
+func idle_to_squat():
 	pass
 	
 func squat():

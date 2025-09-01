@@ -13,9 +13,6 @@ func move_right():
 func idle_to_squat():
 	change_state.call(EState.IDLE_TO_SQUAT)
 	
-func squat():
-	change_state.call(EState.SQUAT)
-	
 func punch():
 	change_state.call(EState.PUNCH)
 

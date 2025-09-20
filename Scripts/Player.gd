@@ -16,6 +16,7 @@ signal health_changed(old_health, new_health)
 @onready var _low_kick_input = "player_1_low_kick" if _is_player_1 else "player_2_low_kick"
 @onready var _block_input = "player_1_block" if _is_player_1 else "player_2_block"
 @onready var _squat_block_input = "player_1_squat_block" if _is_player_1 else "player_2_squat_block"
+@onready var _taunt_input = "player_1_taunt" if _is_player_1 else "player_2_taunt"
 @onready var _curr_health : float = max_health
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -42,6 +43,7 @@ func _init():
 		EState.HIGH_KNOCKBACK : HighKnockbackState,
 		EState.BLOCK : BlockState,
 		EState.SQUAT_BLOCK : SquatBlockState,
+		EState.TAUNT : TauntState,
 	}
 
 func _ready():
@@ -55,6 +57,7 @@ func _ready():
 		EState.BLOCK : null,
 		EState.SQUAT_BLOCK : null,
 		EState.IDLE_TO_SQUAT : null,
+		EState.TAUNT : null,
 	}
 	change_state(EState.IDLE)
 
@@ -84,6 +87,8 @@ func _unhandled_input(event):
 				state.squat_block()
 			elif InputMap.action_has_event(_squat_input, event):
 				state.idle_to_squat()
+			elif InputMap.action_has_event(_taunt_input, event):
+				state.taunt()
 
 func change_state(new_state):
 	if not class_per_state.has(new_state):

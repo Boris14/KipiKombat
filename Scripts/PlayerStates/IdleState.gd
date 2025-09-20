@@ -24,3 +24,6 @@ func block():
 	
 func squat_block():
 	change_state.call(EState.SQUAT_BLOCK)
+
+func taunt():
+	change_state.call(EState.TAUNT)

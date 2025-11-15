@@ -11,4 +11,5 @@ enum {
 	WALK,
 	IDLE_TO_SQUAT,
 	SQUAT,
+	TAUNT,
 }

@@ -17,6 +17,7 @@ var animations = {
 	EAnimation.IDLE_TO_SQUAT : "Idle to Squat",
 	EAnimation.SQUAT : "Squat",
 	EAnimation.SQUAT_BLOCK : "Squat Block",
+	EAnimation.TAUNT : "Taunt",
 }
 
 func setup(change_state, character, anim_player, area):
@@ -64,6 +65,9 @@ func block():
 	pass
 	
 func squat_block():
+	pass
+	
+func taunt():
 	pass
 
 # Signal handlers	
